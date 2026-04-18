@@ -193,7 +193,7 @@ walls, player, enemy, gold = level_1.reset()
 font_1 = font.SysFont('Arial', 70)
 win = font_1.render('YOU WIN!', True, (0,200,0))
 lose = font_1.render('YOU LOSE!', True, (200,0,0))
-button = Button(150,100,450,60,(0,0,60), 'RESET', 70, (0,60,0),func_test_1)
+button = Button(250,200,220,100,(204,102,0), 'RESET', 70, (255,253,208),func_test_1)
 
 mixer.music.play()
 mixer.music.set_volume(0.2)
@@ -227,9 +227,9 @@ while game.run:
             
     else:
         if game.win:
-            window.blit(win,(250,220))
+            window.blit(win,(200,100))
         else:
-            window.blit(lose,(250,220))
+            window.blit(lose,(200,100))
     if game.finish == True:
         button.reset()
         
