@@ -131,6 +131,7 @@ class Button(sprite.Sprite):
 
     def reset(self):
         window.blit(self.image, (self.rect.x, self.rect.y))
+        
     
     # def update():
     #     if not self.func is None:
@@ -210,10 +211,12 @@ while game.run:
         for w in walls:
             w.reset()
             if sprite.collide_rect(player,w):
+                game.win = False
                 game.finish = True
                 kick.play()
         
         if sprite.collide_rect(player,enemy):
+            game.win = False
             game.finish = True
             kick.play()
         
@@ -229,6 +232,7 @@ while game.run:
             window.blit(lose,(250,220))
     if game.finish == True:
         button.reset()
+        
 
 
     
